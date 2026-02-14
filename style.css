@@ -1,0 +1,200 @@
+body {
+  font-family: "Vazirmatn", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0f172a;
+}
+
+/* --- پس‌زمینه طرح "Blue Bloom" --- */
+.bg-wallpaper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* گرادینت پیچیده برای شبیه‌سازی تصویر */
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(56, 189, 248, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(139, 92, 246, 0.15) 0%,
+      transparent 50%
+    ),
+    radial-gradient(circle at 50% 50%, #1e3a8a 0%, #0f172a 100%);
+  filter: contrast(1.1) brightness(0.9);
+}
+
+/* افکت امواج آبی انتزاعی */
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+}
+
+/* --- استایل کارت‌های شیشه‌ای --- */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.glass-panel:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* --- نوار عنوان بالا --- */
+.top-bar-glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* --- هدرهای رنگی داخل کارت --- */
+.header-strip {
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* رنگ‌های اختصاصی هدرها (طبق تصویر) */
+.header-green {
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.3),
+    rgba(16, 185, 129, 0.1)
+  );
+  color: #6ee7b7;
+  border-left: 4px solid #10b981;
+}
+.header-blue {
+  background: linear-gradient(
+    90deg,
+    rgba(6, 182, 212, 0.3),
+    rgba(6, 182, 212, 0.1)
+  );
+  color: #67e8f9;
+  border-left: 4px solid #06b6d4;
+}
+.header-purple {
+  background: linear-gradient(
+    90deg,
+    rgba(192, 38, 211, 0.3),
+    rgba(192, 38, 211, 0.1)
+  );
+  color: #f0abfc;
+  border-left: 4px solid #c026d3;
+}
+
+/* --- ناحیه محتوای کد --- */
+.code-area {
+  background: rgba(0, 0, 0, 0.4); /* خیلی تیره و شفاف */
+  padding: 1.5rem;
+  font-family: "Consolas", "Monaco", monospace;
+  direction: ltr;
+  color: #e2e8f0;
+  min-height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- تکست‌اریا --- */
+textarea {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  resize: none;
+  font-family: "Consolas", monospace;
+  direction: ltr; /* چپ چین شدن متن */
+  text-align: left;
+}
+textarea:focus {
+  border-color: #38bdf8 !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+  outline: none;
+}
+
+/* دکمه اصلی آبی */
+.btn-primary {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* دکمه مثال (کوچک) */
+.btn-small {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #cbd5e1;
+}
+.btn-small:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* استایل راهنما */
+.guide-list li {
+  position: relative;
+  padding-right: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+.guide-list li::before {
+  content: "•";
+  position: absolute;
+  right: 0;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* افکت درخشش برای اسکرول بار */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
