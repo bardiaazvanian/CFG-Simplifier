@@ -28,7 +28,7 @@
 
 فایل‌های پروژه را دانلود یا کلون کنید:
 
-git clone [https://github.com/your-username/cfg-simplifier.git](https://github.com/bardiaazvanian/CFG-Simplifier.git]
+git clone https://github.com/your-username/cfg-simplifier.git](https://github.com/bardiaazvanian/CFG-Simplifier.git
 
 فایل .html اصلی (مثلاً index.html) را با مرورگر خود (Chrome, Firefox, Edge) باز کنید.
 
